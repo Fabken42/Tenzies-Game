@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Dado from './components/Dado';
-import Confetti from 'react-confetti';
 
 function App() {
   // Estado para armazenar os dados do jogo
@@ -52,11 +51,6 @@ function App() {
 
   return (
     <main>
-      {/* Mostrar confetes se o jogo foi ganho */}
-      {ganhouJogo && (
-        <Confetti width={600} height={600} recycle=false/>
-      )}
-
       <h1 className='titulo'>Tenzies Game</h1>
       <p className='instrucoes'>
         Role os dados até que todos sejam iguais. Clique em cada dado para fixá-lo no valor atual entre as jogadas.
