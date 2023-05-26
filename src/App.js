@@ -54,7 +54,7 @@ function App() {
     <main>
       {/* Mostrar confetes se o jogo foi ganho */}
       {ganhouJogo && (
-        <Confetti width={1200} height={0} recycle=false/>
+        <Confetti width={600} height={600} recycle=false/>
       )}
 
       <h1 className='titulo'>Tenzies Game</h1>
