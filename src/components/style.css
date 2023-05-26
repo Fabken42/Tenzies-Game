@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #0b2434;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: #f5f5f5;
+  height: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.titulo{
+  font-size: 3.5rem;
+}
+
+.instrucoes{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.dados {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;  
+}
+
+.dado{
+  height: 80px;
+  width: 80px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.dado-numero{
+  font-size: 3rem;
+}
+
+.novos-dados-btn{
+  height: 75px;
+  width: 170px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #5035ff;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.novos-dados-btn:focus{
+  outline: none;
+}
+
+.novos-dados-btn:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0,0,0,.7);
+}
+
+.botao-texto{
+  font-size: 1.5rem;
+}
+
+.dado-segurado{
+  background-color: #59e391;
+}
+
+
+@media (max-width: 860px) {
+  main {
+    padding: 30px; 
+  }
+  
+  .titulo {
+    font-size: 2.5rem; 
+  }
+  
+  .instrucoes {
+    font-size: 1.1rem; 
+  }
+  
+  .dados {
+    grid-template: auto auto auto / repeat(3, 1fr); 
+  }
+  
+  .dado {
+    height: 60px;
+    width: 60px; 
+    &:nth-child(10){
+      grid-column: 2 / 3;
+    }
+  }
+  
+  .dado-numero {
+    font-size: 2rem;
+  }
+  
+  .novos-dados-btn {
+    height: 60px;
+    width: 140px; 
+    font-size: 1rem; 
+  }
+  
+  .botao-texto {
+    font-size: 1rem;
+  }
+}
